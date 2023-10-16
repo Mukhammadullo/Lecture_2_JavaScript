@@ -89,16 +89,43 @@ return num
 
 
 ```
-# _3.What is Recursion in JavaScipt_
+# _3.What is Recursion in JavaScipt?_
 >### Recursion is when a function calls itself until someone stops it. If no one stops it then it'll 
 recurse (call itself) forever. Recursive functions let you perform a unit of work multiple times.
+Рекурсивная функция - это функция, которая вызывает сама себя внутри своего тела.
 ```js
-function recursion (num){
-if(condition){
-      recurse();    
+function factorial(n) {
+  if (n <= 1) {
+    return 1;
+  } else {
+    return n * factorial(n - 1);
+  }
 }
+
+console.log(factorial(5)); // 120
+```
+# _4.What is Closure in JavaScript?_
+>### A closure is the combination of a function bundled together (enclosed) with references to 
+its surrounding state (the lexical environment). In other words, a closure gives you 
+access to an outer function's scope from an inner function.
+>## Замыкание — это набор функций, сгруппированных по ссылке.
+его окружение (лексическое окружение). Другими словами, это дает вам завершение
+получить доступ к области внешней функции из внутренней функции.
+```js
+let main = (one) => {
+    return (two) => {
+        return (three) => {
+            return (four) => {
+                return (five) => {
+                    return (six) => {
+                        return one + two + three + four + five + six 
+                    }
+                }
+            }
+        }
+    }
 }
-console.log(recursion(5))
+console.log(main(1)(2)(3)(4)(5)(6));
 ```
 
 
