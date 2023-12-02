@@ -4,7 +4,7 @@
 _JavaScript has the following kinds of scopes:_
 >_1.Global Scope-The default scope for all code running in script mode._
 ```js
-let name="Muhammadullo";
+let name="Mukhammadullo";
 let age=20;
 let job="Student";
 
